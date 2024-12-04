@@ -45,10 +45,10 @@ st.sidebar.markdown("""---""")
 btnEliminar = st.sidebar.button("Eliminar")
 if btnEliminar:
  deletename = loadByName(nameSearch)
-if deletename is None:
- st.sidebar.write(f"{nameSearch} no existe")
-else:
- dbNames.document(deletename.id).delete()
+ if deletename is None:
+  st.sidebar.write(f"{nameSearch} no existe")
+ else:
+  dbNames.document(deletename.id).delete()
  st.sidebar.write(f"{nameSearch} eliminado")
 #...
 st.sidebar.markdown("""---""")
@@ -56,10 +56,10 @@ newname = st.sidebar.text_input("Actualizar nombre")
 btnActualizar = st.sidebar.button("Actualizar")
 if btnActualizar:
  updatename = loadByName(nameSearch)
-if updatename is None:
- st.write(f"{nameSearch} no existe")
-else:
- myupdatename = dbNames.document(updatename.id)
+ if updatename is None:
+  st.write(f"{nameSearch} no existe")
+ else:
+  myupdatename = dbNames.document(updatename.id)
  myupdatename.update(
  {
      "name": newname
