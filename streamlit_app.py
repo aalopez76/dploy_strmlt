@@ -60,11 +60,11 @@ if btnActualizar:
   st.write(f"{nameSearch} no existe")
  else:
   myupdatename = dbNames.document(updatename.id)
-myupdatename.update(
- {
-  "name": newname
-  }
- )
+  myupdatename.update(
+   {
+    "name": newname
+    }
+   )
 
 
 # ...
