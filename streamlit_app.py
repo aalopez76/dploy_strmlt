@@ -30,7 +30,7 @@ def loadByName(name):
  currentName = None
 for myname in names_ref.stream():
  currentName = myname
-return currentName
+ return currentName
 st.sidebar.subheader("Buscar nombre")
 nameSearch = st.sidebar.text_input("nombre")
 btnFiltrar = st.sidebar.button("Buscar")
