@@ -29,7 +29,7 @@ def loadByName(name):
  names_ref = dbNames.where(u'name', u'==', name)
  currentName = None
  for myname in names_ref.stream():
- currentName = myname
+  currentName = myname
  return currentName
 st.sidebar.subheader("Buscar nombre")
 nameSearch = st.sidebar.text_input("nombre")
